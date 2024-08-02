@@ -218,7 +218,6 @@ void bus_started() {
 
 /**
  * @brief Prints out the message that the bus has arrived at a bus stop.
- * 
  * @param idZ The ID of the bus stop.
 */
 void bus_arrived(int idZ) {
@@ -245,7 +244,6 @@ void bus_arrived(int idZ) {
 
 /**
  * @brief Prints out the message that the bus has left a bus stop.
- * 
  * @param idZ The ID of the bus stop.
 */
 void bus_leaving(int idZ) {
@@ -347,7 +345,6 @@ void bus_finished() {
 
 /**
  * @brief Prints out the message that the skier has started.
- * 
  * @param idL The ID of the skier.
 */
 void skier_started(int idL) {
@@ -374,7 +371,6 @@ void skier_started(int idL) {
 
 /**
  * @brief Prints out the message that the skier has arrived at a bus stop.
- * 
  * @param idL The ID of the skier.
  * @param idZ The ID of the bus stop.
 */
@@ -402,7 +398,6 @@ void skier_arrived(int idL, int idZ) {
 
 /**
  * @brief Prints out the message that the skier is boarding the bus.
- * 
  * @param idL The ID of the skier.
 */
 void skier_boarding(int idL) {
@@ -429,7 +424,6 @@ void skier_boarding(int idL) {
 
 /**
  * @brief Prints out the message that the skier has reached the sky.
- * 
  * @param idL The ID of the skier.
 */
 void skier_sky(int idL) {
@@ -625,7 +619,7 @@ void craete_ski_bus_process() {
                         }
                     }
 
-                    // the only way this will go throw, is when the last skiour would free the bus_stop_sign
+                    // the only way this will go throw, is when the last skier would free the bus_stop_sign
                     // this means, that the last skier has boarded
                     if (sem_wait(bus_stop_sign) < 0) {
                         perror("Bus faild to wait for skiers to baord\n");
@@ -675,7 +669,7 @@ void craete_ski_bus_process() {
                     }
                 }
 
-                // the only way this will go throw, is when the last skiour would free the bus_stop_sign
+                // the only way this will go throw, is when the last skier would free the bus_stop_sign
                 // this means, that the last skier has left
                 if (sem_wait(bus_stop_sign) < 0) {
                     perror("Bus faild to wait for skiers to baord\n");
@@ -704,6 +698,12 @@ void craete_ski_bus_process() {
     }
 }
 
+/**
+ * @brief Main function.
+ * @param argc The amount of arguments.
+ * @param argv The arguments.
+ * @return The exit status.
+*/
 int main(int argc, char *argv[]) {
 
     // chekc for amoutn of arguments
