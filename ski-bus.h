@@ -2,10 +2,9 @@
 _______________________________
 
  * Name: Martin Mendl
- * Login: x247581
  * Email: x247581@fit.vutbr.cz
  * Date: 26.4. 2024
- * file: header file for proj2.c
+ * file: header file for ski-bus.c
 _______________________________
 */
 

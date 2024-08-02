@@ -2,15 +2,14 @@
 _______________________________
 
  * Name: Martin Mendl
- * Login: x247581
  * Email: x247581@fit.vutbr.cz
  * Date: 26.4. 2024
- * file: main code src file for proj2
+ * file: main code src file for ski-bus
 _______________________________
 */
 
 
-#include "proj2.h"
+#include "ski-bus.h"
 
 /**
  * @brief Initializes the bus stops and the semaphore for the final stop.
