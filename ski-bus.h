@@ -73,7 +73,7 @@ typedef struct {
 /**
  * Output file name.
  */
-char out_file_name[] = "proj2.out";
+char out_file_name[] = "ski-bus.out";
 
 /**
  * Pointer to shared memory segment.

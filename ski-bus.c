@@ -484,7 +484,7 @@ void create_skiers_processes() {
             skiers_waiting[skier_destionation]++;
             done_with_my_turn();
 
-            // skier need to wait for the bus stop to become available
+            // skier needs to wait for the bus stop to become available
             if (sem_wait(&bus_stops[skier_destionation]) < 0) {
                 perror("skier faild to shop up to the bus stop\n");
                 destroy_bus_stops();
@@ -709,7 +709,7 @@ int main(int argc, char *argv[]) {
     // chekc for amoutn of arguments
     if (argc != 6) {
         printf("Invalid number of arguments!\n");
-        printf("Usage: ./proj2 L Z K TL TB\n");
+        printf("Usage: ./ski-bus L Z K TL TB\n");
         return 1;
     }
     
